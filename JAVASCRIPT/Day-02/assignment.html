@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const car = ["car1", "car2", "car3"];
+        let text = " ";
+        for (let i = 0; i < car.length; i++) {
+            // console.log("The element of arr is", arr[i]);
+            // console.log(...arr);
+            text += car[i] + "<br>"
+            const h = document.getElementById('head');
+            h.innerHTML = text;
+        }
+        // console.log(text)
+    </script>
+
+</body>
+
+</html>
