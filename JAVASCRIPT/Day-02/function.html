@@ -27,15 +27,34 @@
         // console.log(ans);
 
         const car = (name, cost, cap) => {
-
-        }
+            console.log(`Car: ${name}, Capacity: ${cap}`);
+        };
 
         const helicopter = (name, cost, cap) => {
-
-        }
+            console.log(`Helicopter: ${name}, Capacity: ${cap}`);
+        };
 
         const plane = (name, cost, cap) => {
+            console.log(`Plane: ${name}, Capacity: ${cap}`);
+        };
 
+        let choice = prompt();
+
+        switch (choice) {
+            case 1:
+                car("Toyota", 2000000, 5);
+                break;
+
+            case 2:
+                helicopter("Bell 206", 5000000, 4);
+                break;
+
+            case 3:
+                plane("Boeing 747", 200000000, 416);
+                break;
+
+            default:
+                console.log("Invalid choice");
         }
 
     </script>
