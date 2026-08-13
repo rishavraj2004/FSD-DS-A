@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <script>
+        let num = 153;
+        let n = num;
+        console.log(typeof (num));
+        let sum = 0;
+        while (num > 0) {
+            let r = num % 10;
+            sum += r * r * r;
+            num = Math.floor(num / 10);
+        }
+
+        (num == n) ? console.log(`The number ${n} is armstrong`) : console.log(`The number ${n} is not armstrong`);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
