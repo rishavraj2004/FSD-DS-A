@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .heading {
+            color: white;
+            background-color: black;
+            width: 100%;
+            padding: 10px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .container {
+            padding: 10px 25px;
+            display: flex;
+            gap: 50px;
+
+        }
+
+        #total-btn {
+            padding: 2px 8px;
+            font-size: medium;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head-container">
+        <h2 class="heading">Chai-Wala<br><span>By narendra modi</span></h2>
+        <!-- <p>By Narendra Modi</p> -->
+    </div>
+    <div class="container">
+        <div class="menu">
+            <h3>1.Tea: <span id="tea-price">10</span></h3>
+            <h3>2.Sugar: <span id="sugar-price">50</span></h3>
+            <h3>3.Coffe: <span id="coffe-price">35</span></h3>
+            <h3>4.Rice: <span id="rice-price">45</span></h3>
+            <h3>5.Pules: <span id="putes-price">55</span></h3>
+        </div>
+
+        <div class="purchase">
+            <p>choose your product to buy:</p>
+            <input class="input-product" type="number"></input>
+            <p>Enter your Quantity to buy:</p>
+            <input class="input-quantity" type="number"></input>
+            <p class="total">Total: <span id="total"></span></p>
+            <button id="total-btn">Total</button>
+        </div>
+    </div>
+    <script>
+        const productName = document.querySelector('.input-product');
+        const productQuantity = document.querySelector('.input-quantity');
+        const total = document.getElementById('total');
+        const totalBtn = document.getElementById('total-btn');
+
+        const prices = {
+            1: 10,
+            2: 50,
+            3: 35,
+            4: 45,
+            5: 55
+        };
+
+        totalBtn.addEventListener('click', () => {
+            const product = Number(productName.value);
+            const quantity = Number(productQuantity.value);
+
+
+
+            total.innerHTML = prices[product] * quantity;
+        });
+
+
+    </script>
+
+</body>
+
+</html>
