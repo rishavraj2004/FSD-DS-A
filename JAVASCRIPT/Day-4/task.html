@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            Btech: {
+                student1: { name: "User1", branch: "DS", year: 3 },
+                student2: { name: "User2", branch: "IT", year: 2 }
+            }
+        };
+
+        const ask = prompt("Give ans (e.g., DS or IT)");
+        const { Btech } = student;
+
+        const studentArray = [...Object.values(Btech)];
+
+        const ans = studentArray.filter((i) => {
+            return i.branch === ask;
+        });
+
+        console.log(ans);
+
+
+    </script>
+</body>
+
+</html>
