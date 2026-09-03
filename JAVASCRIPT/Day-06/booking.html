@@ -55,7 +55,7 @@
             </select>
         </p>
 
-        <button onclick="showDetails()">Click To Submit</button>
+        <button onclick="showDetails()" id="btn">Click To Submit</button>
     </div>
 
     <script>
@@ -91,6 +91,11 @@
                 "Total: ₹" + total
             );
         }
+
+        const btn = document.getElementById("btn");
+        btn.addEventListener('click', () => {
+            showDetails();
+        })
     </script>
 
 </body>
