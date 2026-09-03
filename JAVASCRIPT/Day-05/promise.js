@@ -1,20 +1,28 @@
-
 function f1() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("Hii")
-        }, 4000)
-    })
+            console.log("Hii");
+            resolve();
+        }, 4000);
+    });
 }
 
 function f2() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("ABES COLLEGE")
-        }, 2000)
-    })
+            console.log("ABES COLLEGE");
+            resolve();
+        }, 2000);
+    });
 }
 
-f1().then(f2).catch((error) => {
-    console.log("Error")
-})
+async function main() {
+    try {
+        await f1();
+        await f2();
+    } catch (error) {
+        console.log("Error");
+    }
+}
+
+main();
