@@ -27,7 +27,6 @@ function test4(cb) {
 function test5(cb) {
     setTimeout(() => {
         console.log("TASK5");
-        cb();
     }, 4500)
 }
 
